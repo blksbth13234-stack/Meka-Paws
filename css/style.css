@@ -1,0 +1,2738 @@
+/* ====================================================== */
+/*                MEKAPAWS LANDING PAGE                   */
+/* ====================================================== */
+
+/*======================
+PALETA CALICÓ
+=======================*/
+
+:root{
+
+    --crema:#F8F3EB;
+    --naranja:#D97A2B;
+    --naranja-hover:#BF651E;
+    --marron:#7A5230;
+    --negro:#2E2E2E;
+    --gris:#666666;
+    --blanco:#FFFFFF;
+
+    --sombra:0 10px 35px rgba(0,0,0,.10);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/*======================
+RESET
+=======================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Times New Roman", serif;
+
+    background:var(--crema);
+
+    color:var(--negro);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+/*======================
+SCROLL
+=======================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#efe8df;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--naranja);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--marron);
+
+}
+
+/*======================
+TIPOGRAFÍA
+=======================*/
+
+h1{
+
+    font-size:4rem;
+
+    font-weight:bold;
+
+    color:var(--marron);
+
+}
+
+h2{
+
+    font-size:2.8rem;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+    color:var(--marron);
+
+}
+
+h3{
+
+    font-size:2rem;
+
+}
+
+h4{
+
+    font-size:1.4rem;
+
+    font-weight:bold;
+
+}
+
+h5{
+
+    font-weight:bold;
+
+}
+
+p{
+
+    font-size:1.1rem;
+
+    color:var(--gris);
+
+}
+
+section{
+
+    padding-top:90px;
+
+    padding-bottom:90px;
+
+}
+
+/*======================
+LINKS
+=======================*/
+
+a{
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+a:hover{
+
+    text-decoration:none;
+
+}
+
+/*======================
+NAVBAR
+=======================*/
+
+.navbar{
+
+    background:white !important;
+
+    padding:18px 0;
+
+    transition:.4s;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+
+}
+
+.logo-text{
+
+    color:var(--marron);
+
+    font-size:1.6rem;
+
+    margin-left:10px;
+
+    font-weight:bold;
+
+}
+
+.nav-link{
+
+    color:var(--negro) !important;
+
+    margin-left:18px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.nav-link:hover{
+
+    color:var(--naranja) !important;
+
+}
+
+.navbar .btn{
+
+    background:var(--naranja);
+
+    color:white;
+
+    border:none;
+
+    transition:var(--transition);
+
+}
+
+.navbar .btn:hover{
+
+    background:var(--marron);
+
+}
+
+/*======================
+HERO
+=======================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(
+        130deg,
+        #FFFDF9,
+        #F8F3EB
+    );
+
+}
+
+.hero h1 {
+    font-family: "Times New Roman", serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    line-height: 1.2;
+    font-weight: bold;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: break-word;
+    margin-bottom: 1rem;
+}
+
+.hero p{
+
+    font-size:1.25rem;
+
+}
+
+.hero-img{
+
+    max-width:95%;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*======================
+BOTONES
+=======================*/
+
+.btn{
+
+    border-radius:50px;
+
+    padding:15px 35px;
+
+    font-size:1rem;
+
+    transition:var(--transition);
+
+}
+
+.btn-warning{
+
+    background:var(--naranja);
+
+    color:white;
+
+    border:none;
+
+}
+
+.btn-warning:hover{
+
+    background:var(--marron);
+
+    transform:translateY(-4px);
+
+    color:white;
+
+}
+
+.btn-outline-dark{
+
+    border:2px solid var(--negro);
+
+}
+
+.btn-outline-dark:hover{
+
+    background:var(--negro);
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+/*======================
+ESTADÍSTICAS HERO
+=======================*/
+
+.hero h2{
+
+    color:var(--naranja);
+
+    font-size:2.4rem;
+
+}
+
+.hero .col-4 p{
+
+    font-size:.95rem;
+
+}
+
+/*======================
+CARDS GENERALES
+=======================*/
+
+.card{
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    transition:var(--transition);
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    transition:.6s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card-body{
+
+    padding:35px;
+
+}
+
+/*======================
+ICONOS
+=======================*/
+
+.bi{
+
+    transition:.4s;
+
+}
+
+.card:hover .bi{
+
+    transform:scale(1.15);
+
+}
+
+/*======================
+SECCIÓN BENEFICIOS
+=======================*/
+
+#beneficios{
+
+    background:white;
+
+}
+
+#beneficios .card{
+
+    min-height:330px;
+
+}
+
+#beneficios i{
+
+    color:var(--naranja);
+
+}
+
+/*======================
+UTILIDADES
+=======================*/
+
+.shadow{
+
+    box-shadow:var(--sombra)!important;
+
+}
+
+.rounded{
+
+    border-radius:var(--radius)!important;
+
+}
+
+.text-warning{
+
+    color:var(--naranja)!important;
+}
+
+.bg-light{
+
+    background:#FFFDFB!important;
+
+}
+
+.container{
+
+    max-width:1200px;
+
+}
+
+/* ====================================================== */
+/*           SOBRE MEKAPAWS                               */
+/* ====================================================== */
+
+.bg-light{
+
+    background:#FFFDFB !important;
+
+}
+
+.bg-light img{
+
+    border-radius:20px;
+
+    transition:.5s;
+
+}
+
+.bg-light img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.bg-light h2{
+
+    margin-bottom:25px;
+
+}
+
+.bg-light .d-flex{
+
+    margin-bottom:20px;
+
+}
+
+.bg-light .bi{
+
+    color:var(--naranja);
+
+}
+
+/* ====================================================== */
+/*                PROCESO                                 */
+/* ====================================================== */
+
+.process-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:.35s;
+
+    box-shadow:var(--sombra);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.process-card img{
+
+    border-radius:15px;
+
+    transition:.5s;
+
+}
+
+.process-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.process-number{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--naranja);
+
+    color:white;
+
+    font-size:1.6rem;
+
+    font-weight:bold;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 25px rgba(217,122,43,.30);
+
+}
+
+.process-card h4{
+
+    margin:20px 0;
+
+    color:var(--marron);
+
+}
+
+.process-card p{
+
+    margin-bottom:0;
+
+}
+
+/* ====================================================== */
+/*            TECNOLOGÍA                                  */
+/* ====================================================== */
+
+#tecnologia{
+
+    background:#FFFDFB;
+
+}
+
+#tecnologia img{
+
+    border-radius:20px;
+
+    transition:.5s;
+
+}
+
+#tecnologia img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.list-group{
+
+    margin-top:35px;
+
+}
+
+.list-group-item{
+
+    border:none;
+
+    padding:18px;
+
+    background:transparent;
+
+    font-size:1.05rem;
+
+    color:var(--gris);
+
+}
+
+.list-group-item:hover{
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+}
+
+/* ====================================================== */
+/*          PRÓTESIS                                      */
+/* ====================================================== */
+
+#protesis{
+
+    background:white;
+
+}
+
+#protesis .card{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+#protesis .card img{
+
+    height:270px;
+
+    object-fit:cover;
+
+}
+
+#protesis .card-body{
+
+    padding:30px;
+
+}
+
+#protesis h4{
+
+    color:var(--marron);
+
+}
+
+#protesis .card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/* ====================================================== */
+/*          GALERÍA                                       */
+/* ====================================================== */
+
+.gallery{
+
+    padding:80px 0;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    transition:.5s;
+
+    cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+}
+
+/* ====================================================== */
+/*           EFECTOS GENERALES                            */
+/* ====================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title p{
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+/* ====================================================== */
+/*          FONDOS DECORATIVOS                            */
+/* ====================================================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:rgba(217,122,43,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+    z-index:0;
+
+}
+
+.hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ====================================================== */
+/*             ANIMACIONES                                */
+/* ====================================================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.zoom{
+
+    animation:zoom .7s ease;
+
+}
+
+@keyframes zoom{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ====================================================== */
+/*      HOVER BOTONES GENERALES                           */
+/* ====================================================== */
+
+button:hover,
+
+.btn:hover{
+
+    box-shadow:0 12px 30px rgba(217,122,43,.35);
+
+}
+
+/* ====================================================== */
+/*          SEPARACIÓN ENTRE SECCIONES                    */
+/* ====================================================== */
+
+section{
+
+    position:relative;
+
+}
+
+section:nth-child(even){
+
+    background:#FFFDFB;
+
+}
+
+/* ====================================================== */
+/*                  CASOS DE ÉXITO                        */
+/* ====================================================== */
+
+#casos{
+
+    background:#FFFDFB;
+
+}
+
+#casos .card{
+
+    border:none;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+#casos .card img{
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+#casos .card-body{
+
+    padding:30px;
+
+}
+
+#casos .card h4{
+
+    color:var(--marron);
+
+    margin-bottom:15px;
+
+}
+
+#casos .card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/* ====================================================== */
+/*                CONTADORES                              */
+/* ====================================================== */
+
+.counter-section{
+
+    background:linear-gradient(135deg,
+    var(--naranja),
+    var(--marron));
+
+    color:white;
+
+}
+
+.counter-section h2{
+
+    color:white;
+
+    font-size:3.4rem;
+
+    margin-bottom:10px;
+
+}
+
+.counter-section p{
+
+    color:white;
+
+    font-size:1.1rem;
+
+}
+
+.counter{
+
+    font-weight:bold;
+
+}
+
+/* ====================================================== */
+/*                TESTIMONIOS                             */
+/* ====================================================== */
+
+#testimonios{
+
+    background:white;
+
+}
+
+.testimonial{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.testimonial:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.testimonial img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border:5px solid var(--naranja);
+
+    margin:auto;
+
+}
+
+.testimonial h5{
+
+    margin-top:15px;
+
+    color:var(--marron);
+
+}
+
+.testimonial p{
+
+    font-style:italic;
+
+}
+
+/* ====================================================== */
+/*                COBERTURA                               */
+/* ====================================================== */
+
+.coverage{
+
+    background:#FFFDFB;
+
+}
+
+.coverage img{
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.coverage ul{
+
+    margin-top:25px;
+
+}
+
+.coverage li{
+
+    margin-bottom:15px;
+
+    font-size:1.1rem;
+
+}
+
+/* ====================================================== */
+/*                 GARANTÍA                               */
+/* ====================================================== */
+
+.guarantee{
+
+    background:white;
+
+}
+
+.guarantee img{
+
+    border-radius:20px;
+
+}
+
+.guarantee .bi{
+
+    color:var(--naranja);
+
+}
+
+.guarantee .d-flex{
+
+    margin-bottom:20px;
+
+}
+
+/* ====================================================== */
+/*                     FAQ                                */
+/* ====================================================== */
+
+#faq{
+
+    background:#FFFDFB;
+
+}
+
+.accordion{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.accordion-item{
+
+    border:none;
+
+    margin-bottom:20px;
+
+    border-radius:15px !important;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+
+}
+
+.accordion-button{
+
+    background:white;
+
+    font-weight:bold;
+
+    font-size:1.15rem;
+
+    padding:22px;
+
+}
+
+.accordion-button:not(.collapsed){
+
+    background:var(--naranja);
+
+    color:white;
+
+}
+
+.accordion-button:focus{
+
+    box-shadow:none;
+
+}
+
+.accordion-body{
+
+    padding:25px;
+
+    background:#fffdfc;
+
+    color:var(--gris);
+
+}
+
+/* ====================================================== */
+/*            EFECTOS DE IMÁGENES                         */
+/* ====================================================== */
+
+img{
+
+    transition:.5s;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ====================================================== */
+/*             TARJETAS GENERALES                         */
+/* ====================================================== */
+
+.card{
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/* ====================================================== */
+/*            SEPARADORES DECORATIVOS                     */
+/* ====================================================== */
+
+.section-divider{
+
+    width:120px;
+
+    height:5px;
+
+    background:var(--naranja);
+
+    margin:20px auto 50px;
+
+    border-radius:50px;
+
+}
+
+/* ====================================================== */
+/*           ICONOS CIRCULARES                            */
+/* ====================================================== */
+
+.icon-circle{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(217,122,43,.12);
+
+    color:var(--naranja);
+
+    font-size:2rem;
+
+    margin:auto;
+
+}
+
+/* ====================================================== */
+/*          ANIMACIÓN SUAVE DE TARJETAS                   */
+/* ====================================================== */
+
+.card,
+
+.testimonial,
+
+.process-card{
+
+    transition:
+
+        transform .35s,
+
+        box-shadow .35s;
+
+}
+
+.card:hover,
+
+.testimonial:hover,
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+/* ====================================================== */
+/*             TEXTO CENTRADO                             */
+/* ====================================================== */
+
+.text-center p{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+/* ====================================================== */
+/*            BORDES REDONDEADOS                          */
+/* ====================================================== */
+
+.rounded-xl{
+
+    border-radius:25px;
+
+}
+
+/* ====================================================== */
+/*                  CONTACTO                              */
+/* ====================================================== */
+
+.contacto-section{
+
+    background:white;
+
+}
+
+.contacto-section form{
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+}
+
+.contacto-section input,
+.contacto-section textarea,
+.contacto-section select{
+
+    border-radius:12px;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    transition:.3s;
+
+}
+
+.contacto-section input:focus,
+.contacto-section textarea:focus,
+.contacto-section select:focus{
+
+    border-color:var(--naranja);
+
+    box-shadow:0 0 0 .25rem rgba(217,122,43,.20);
+
+}
+
+.contacto-section textarea{
+
+    resize:none;
+
+}
+
+/* ====================================================== */
+/*                  CTA FINAL                             */
+/* ====================================================== */
+
+.cta-final{
+
+    background:linear-gradient(
+        135deg,
+        var(--marron),
+        var(--naranja)
+    );
+
+    color:white;
+
+}
+
+.cta-final h2{
+
+    color:white;
+
+    font-size:3rem;
+
+}
+
+.cta-final p{
+
+    color:white;
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+}
+
+.cta-final .btn{
+
+    background:white;
+
+    color:var(--marron);
+
+    font-weight:bold;
+
+}
+
+.cta-final .btn:hover{
+
+    background:var(--crema);
+
+}
+
+/* ====================================================== */
+/*                     FOOTER                             */
+/* ====================================================== */
+
+.footer{
+
+    background:#2A221C;
+
+    color:white;
+
+}
+
+.footer h5{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.footer p{
+
+    color:#ddd;
+
+}
+
+.footer a{
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer a:hover{
+
+    color:var(--naranja);
+
+}
+
+.footer ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.footer li{
+
+    margin-bottom:10px;
+
+}
+
+.footer hr{
+
+    border-color:rgba(255,255,255,.15);
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.08);
+
+    font-size:1.2rem;
+
+}
+
+.social-icons a:hover{
+
+    background:var(--naranja);
+
+    color:white;
+
+}
+
+/* ====================================================== */
+/*                BOTÓN WHATSAPP                          */
+/* ====================================================== */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.12);
+
+    color:white;
+
+}
+
+/* ====================================================== */
+/*             BOTÓN VOLVER ARRIBA                        */
+/* ====================================================== */
+
+.btn-top{
+
+    position:fixed;
+
+    bottom:105px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--marron);
+
+    color:white;
+
+    display:none;
+
+    z-index:999;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+.btn-top:hover{
+
+    background:var(--naranja);
+
+    transform:translateY(-4px);
+
+}
+
+/* ====================================================== */
+/*              ANIMACIONES GENERALES                     */
+/* ====================================================== */
+
+.fade{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.scale{
+
+    animation:scale .7s ease;
+
+}
+
+@keyframes scale{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ====================================================== */
+/*                 RESPONSIVE                             */
+/* ====================================================== */
+
+@media (max-width:1200px){
+
+.hero h1{
+
+font-size:3.2rem;
+
+}
+
+}
+
+@media (max-width:992px){
+
+section{
+
+padding:70px 0;
+
+}
+
+.hero{
+
+text-align:center;
+
+padding-top:120px;
+
+}
+
+.hero img{
+
+margin-top:50px;
+
+}
+
+.navbar{
+
+padding:12px;
+
+}
+
+.hero h1{
+
+font-size:2.8rem;
+
+}
+
+h2{
+
+font-size:2.3rem;
+
+}
+
+.footer{
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero h1{
+
+font-size:2.3rem;
+
+}
+
+.hero p{
+
+font-size:1.05rem;
+
+}
+
+.btn{
+
+width:100%;
+
+margin-bottom:15px;
+
+}
+
+.card{
+
+margin-bottom:25px;
+
+}
+
+.counter-section h2{
+
+font-size:2.4rem;
+
+}
+
+.contacto-section img{
+
+margin-bottom:40px;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.hero{
+
+padding-top:100px;
+
+}
+
+.hero h1{
+
+font-size:2rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+h2{
+
+font-size:1.8rem;
+
+}
+
+.card-body{
+
+padding:25px;
+
+}
+
+.process-card{
+
+padding:25px;
+
+}
+
+.footer{
+
+padding:50px 20px;
+
+}
+
+.whatsapp-float{
+
+width:55px;
+
+height:55px;
+
+font-size:1.7rem;
+
+}
+
+/* =====================================================
+   VOLVER ARRIBA — PATA MEKAPAWS
+   ===================================================== */
+
+   .btn-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 52px;
+    height: 52px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--marron);
+    color: var(--crema);
+
+    z-index: 1070;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Pata */
+
+.btn-top .paw-icon {
+    width: 30px;
+    height: 30px;
+
+    display: block;
+
+    fill: currentColor;
+
+    overflow: visible;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.btn-top:hover {
+    background: var(--naranja);
+    color: var(--crema);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 11px 25px rgba(0, 0, 0, 0.24);
+}
+
+.btn-top:hover .paw-icon {
+    transform: rotate(-8deg) scale(1.05);
+}
+
+
+/* Click */
+
+.btn-top:active {
+    transform: translateY(-1px);
+}
+
+
+/* Móvil */
+
+@media (max-width: 576px) {
+
+    .btn-top {
+        right: 18px;
+        bottom: 18px;
+
+        width: 48px;
+        height: 48px;
+    }
+
+    .btn-top .paw-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+}
+
+/* ====================================================== */
+/*              EFECTOS FINALES                           */
+/* ====================================================== */
+
+.card,
+.process-card,
+.testimonial,
+.btn,
+img{
+
+transition:all .35s ease;
+
+}
+
+.card:hover,
+.process-card:hover,
+.testimonial:hover{
+
+transform:translateY(-8px);
+
+}
+
+img{
+
+max-width:100%;
+
+height:auto;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+/* =====================================================
+   MEKAPAWS - CHATBOT LOCAL + FORMULARIO WHATSAPP
+   ===================================================== */
+
+html {
+    scroll-padding-top: 90px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.btn,
+button,
+.nav-link,
+.chatbot-toggle,
+.chatbot-options button {
+    touch-action: manipulation;
+}
+
+.form-control,
+.form-select {
+    min-height: 48px;
+}
+
+textarea.form-control {
+    min-height: 130px;
+}
+
+/* ---------- Chatbot ---------- */
+
+.mekapaws-chatbot {
+    position: fixed;
+    right: max(20px, env(safe-area-inset-right));
+    bottom: max(20px, env(safe-area-inset-bottom));
+    z-index: 1080;
+    font-family: inherit;
+}
+
+.chatbot-toggle {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #25D366;
+    color: #fff;
+    font-size: 1.55rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.20);
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(0,0,0,.24);
+}
+
+.chatbot-notification {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #dc3545;
+    color: #fff;
+    font-size: .72rem;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    border: 2px solid #fff;
+}
+
+.chatbot-window {
+    position: absolute;
+    right: 0;
+    bottom: 76px;
+    width: min(390px, calc(100vw - 30px));
+    height: min(600px, calc(100vh - 110px));
+    min-height: 430px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 55px rgba(0,0,0,.22);
+    border: 1px solid rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px) scale(.98);
+    transform-origin: bottom right;
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+
+.mekapaws-chatbot.is-open .chatbot-window {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.chatbot-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 15px 16px;
+    background: #fff3cd;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.chatbot-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #ffc107;
+    color: #212529;
+}
+
+.chatbot-header strong {
+    display: block;
+    line-height: 1.2;
+}
+
+.chatbot-header small {
+    display: block;
+    margin-top: 3px;
+    color: #6c757d;
+}
+
+.chatbot-close {
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: #495057;
+}
+
+.chatbot-close:hover {
+    background: rgba(0,0,0,.06);
+}
+
+.chatbot-messages {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 16px;
+    background: #f8f9fa;
+    overscroll-behavior: contain;
+}
+
+.chatbot-message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chatbot-message span {
+    max-width: 88%;
+    padding: 11px 13px;
+    border-radius: 15px;
+    font-size: .94rem;
+    line-height: 1.45;
+    word-wrap: break-word;
+}
+
+.chatbot-message.bot {
+    justify-content: flex-start;
+}
+
+.chatbot-message.bot span {
+    background: #fff;
+    color: #212529;
+    border-top-left-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.chatbot-message.user {
+    justify-content: flex-end;
+}
+
+.chatbot-message.user span {
+    background: #212529;
+    color: #fff;
+    border-top-right-radius: 5px;
+}
+
+.chatbot-options {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.chatbot-options button {
+    width: 100%;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    color: #212529;
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: .88rem;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.chatbot-options button:hover {
+    border-color: #ffc107;
+    background: #fffaf0;
+    transform: translateY(-1px);
+}
+
+.chatbot-input-area {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #dee2e6;
+}
+
+.chatbot-input-area input {
+    min-width: 0;
+    flex: 1;
+    border: 1px solid #ced4da;
+    border-radius: 12px;
+    padding: 10px 12px;
+    outline: none;
+}
+
+.chatbot-input-area input:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 3px rgba(255,193,7,.18);
+}
+
+.chatbot-input-area button {
+    flex: 0 0 46px;
+    min-height: 46px;
+    border: 0;
+    border-radius: 12px;
+    background: #ffc107;
+    color: #212529;
+    cursor: pointer;
+}
+
+.chatbot-typing {
+    opacity: .65;
+    font-style: italic;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 575.98px) {
+    .mekapaws-chatbot {
+        right: 14px;
+        bottom: max(14px, env(safe-area-inset-bottom));
+    }
+
+    .chatbot-toggle {
+        width: 58px;
+        height: 58px;
+    }
+
+    .chatbot-window {
+        position: fixed;
+        left: 10px;
+        right: 10px;
+        bottom: max(82px, calc(env(safe-area-inset-bottom) + 72px));
+        width: auto;
+        height: min(72vh, 600px);
+        min-height: 400px;
+        border-radius: 18px;
+        transform-origin: bottom center;
+    }
+
+    .chatbot-message span {
+        max-width: 92%;
+    }
+
+    .chatbot-options button {
+        min-height: 44px;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .chatbot-toggle:hover,
+    .chatbot-options button:hover,
+    .chatbot-close:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chatbot-window,
+    .chatbot-toggle,
+    .chatbot-options button {
+        transition: none;
+    }
+}
+
+/* =====================================================
+   CHATBOT — GATO CALICÓ
+   ===================================================== */
+
+   .chatbot-toggle {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 2px solid rgba(91, 61, 45, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7efe4;
+    color: #5b3d2d;
+
+    box-shadow:
+        0 8px 22px rgba(75, 48, 32, 0.18),
+        0 2px 5px rgba(75, 48, 32, 0.08);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 12px 28px rgba(75, 48, 32, 0.22),
+        0 3px 7px rgba(75, 48, 32, 0.10);
+}
+
+.chatbot-toggle:active {
+    transform: scale(0.96);
+}
+
+
+/* ---------- Cabeza ---------- */
+
+.cat-icon {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: block;
+}
+
+
+/* ---------- Cara ---------- */
+
+.cat-face {
+    position: absolute;
+
+    left: 6px;
+    top: 7px;
+
+    width: 30px;
+    height: 29px;
+
+    border-radius: 48% 48% 45% 45%;
+
+    background: #f4d7b7;
+
+    box-shadow:
+        inset 0 -2px 0 rgba(91, 61, 45, 0.08);
+}
+
+
+/* ---------- Orejas ---------- */
+
+.cat-ear {
+    position: absolute;
+
+    top: 2px;
+
+    width: 15px;
+    height: 17px;
+
+    background: #f4d7b7;
+
+    z-index: 0;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+.cat-ear-left {
+    left: 5px;
+
+    transform: rotate(-13deg);
+}
+
+.cat-ear-right {
+    right: 5px;
+
+    transform: rotate(13deg);
+}
+
+
+/* Interior de las orejas */
+
+.cat-ear::after {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 4px;
+
+    width: 7px;
+    height: 8px;
+
+    background: #d88991;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+
+/* ---------- Manchas calicó ---------- */
+
+.cat-patch {
+    position: absolute;
+
+    display: block;
+
+    background: #5b3d32;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.cat-patch-one {
+    width: 13px;
+    height: 12px;
+
+    top: -1px;
+    right: 1px;
+
+    border-radius: 60% 40% 50% 35%;
+
+    background: #5b3d32;
+
+    transform: rotate(15deg);
+}
+
+.cat-patch-two {
+    width: 9px;
+    height: 10px;
+
+    left: 0;
+    bottom: 3px;
+
+    border-radius: 50% 35% 55% 40%;
+
+    background: #d77839;
+
+    transform: rotate(-18deg);
+}
+
+
+/* ---------- Ojos ---------- */
+
+.cat-eye {
+    position: absolute;
+
+    top: 12px;
+
+    width: 4px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #3c2922;
+
+    z-index: 3;
+}
+
+.cat-eye-left {
+    left: 7px;
+}
+
+.cat-eye-right {
+    right: 7px;
+}
+
+
+/* ---------- Nariz ---------- */
+
+.cat-nose {
+    position: absolute;
+
+    left: 50%;
+    top: 18px;
+
+    width: 5px;
+    height: 4px;
+
+    transform: translateX(-50%);
+
+    background: #b96770;
+
+    border-radius: 50% 50% 60% 60%;
+
+    z-index: 4;
+}
+
+
+/* ---------- Boca ---------- */
+
+.cat-mouth {
+    position: absolute;
+
+    top: 21px;
+
+    width: 6px;
+    height: 4px;
+
+    border-bottom: 1.5px solid #5b3d32;
+
+    z-index: 3;
+}
+
+.cat-mouth-left {
+    left: 9px;
+
+    border-radius: 0 0 0 8px;
+
+    transform: rotate(12deg);
+}
+
+.cat-mouth-right {
+    right: 9px;
+
+    border-radius: 0 0 8px 0;
+
+    transform: rotate(-12deg);
+}
+
+
+/* ---------- Notificación ---------- */
+
+.chatbot-notification {
+    position: absolute;
+
+    top: -3px;
+    right: -3px;
+
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #d77839;
+    color: white;
+
+    border: 2px solid #f7efe4;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    z-index: 10;
+}
+
+/* =========================================
+   SOBRE NOSOTROS - MEKAPAWS
+========================================= */
+
+.mekapaws-about-section {
+    background: linear-gradient(180deg, #fffaf3, #f7eee5);
+    color: #49352d;
+}
+
+.mekapaws-about-section .about-eyebrow {
+    color: #a65332;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.mekapaws-about-section .about-intro {
+    max-width: 760px;
+    color: #6c574b;
+}
+
+.mekapaws-about-section h2,
+.mekapaws-about-section h3 {
+    font-weight: 800;
+}
+
+.team-card {
+    overflow: hidden;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #ead8c8;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(73, 53, 45, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(73, 53, 45, 0.15);
+}
+
+.team-photo {
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0d8bd, #d98b55, #49352d);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-placeholder {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.team-placeholder i {
+    font-size: 3.5rem;
+}
+
+.team-card-body {
+    padding: 24px 20px;
+}
+
+.team-label {
+    color: #b96d3c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.team-card-body h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.team-role {
+    color: #a65332;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.team-card-body p:last-child {
+    color: #6c574b;
+    line-height: 1.65;
+}
+
+/* Plano de las instalaciones */
+
+.facilities-panel {
+    margin-top: 20px;
+    padding: clamp(22px, 4vw, 42px);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ead8c8;
+    border-radius: 26px;
+    box-shadow: 0 10px 30px rgba(73, 53, 45, 0.07);
+}
+
+.facility-plan {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: 120px 120px 75px auto;
+    gap: 10px;
+    padding: 16px;
+    background-color: #fffaf3;
+    background-image:
+        linear-gradient(#eadbcd 1px, transparent 1px),
+        linear-gradient(90deg, #eadbcd 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 2px solid #c89c7b;
+    border-radius: 18px;
+}
+
+.plan-room {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    text-align: center;
+    color: #49352d;
+    background: rgba(255, 255, 255, 0.96);
+    border: 2px solid #a65332;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.plan-room i {
+    font-size: 1.6rem;
+    color: #a65332;
+}
+
+.reception {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.design {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.printing {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.assembly {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.storage {
+    grid-column: 1 / 4;
+    grid-row: 3;
+}
+
+.plan-caption {
+    grid-column: 1 / 4;
+    text-align: center;
+    align-self: center;
+    color: #8d5c43;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 575px) {
+    .team-photo {
+        height: 240px;
+    }
+
+    .facility-plan {
+        grid-template-rows: 100px 100px 65px auto;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .plan-room {
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+
+    .plan-room i {
+        font-size: 1.2rem;
+    }
+
+    .plan-caption {
+        font-size: 0.58rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* Difuminar únicamente los bordes de la imagen del hero */
+.hero .hero-img {
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        #000 55%,
+        rgba(0, 0, 0, 0.8) 72%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        #000 55%,
+        rgba(0, 0, 0, 0.8) 72%,
+        transparent 100%
+    );
+}
